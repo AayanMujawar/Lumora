@@ -1,0 +1,325 @@
+/* Circular "S" Logo Styling */
+.logo-icon {
+  background-color: white;
+  color: #00c4e8; /* Matches your navbar cyan */
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ensure the navbar background stays cyan */
+.custom-navbar {
+  background-color: #00c4e8 !important;
+}
+
+/* Ensure brand text is visible */
+.brand-text {
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  color: #ffd700 !important; /* Gold hover */
+}
+
+.navbar-search input {
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+
+/* The specific cyan color for the heading */
+.custom-cyan-text {
+  color: #00c4e8;
+}
+
+/* The blue box on the right */
+.course-box {
+  background-color: #00c4e8;
+  aspect-ratio: 16 / 9; /* Makes it a rectangle */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.course-box:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+/* Styling for the tip text */
+.text-danger {
+  color: #ff4d6d !important;
+  font-family: monospace;
+}
+
+
+/* Banner Styling */
+.about-header {
+  margin-top: 0.5%;
+  background-color: #00c4e8;
+}
+
+/* Header for the Philosophy Section */
+.custom-card-header {
+  background-color: #00c4e8 !important;
+  font-size: 1.1rem;
+}
+
+/* Cyan text for bottom cards */
+.custom-text-cyan {
+  color: #00c4e8;
+  font-size: 1.1rem;
+}
+
+/* Light grey background for the whole page if desired */
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+}
+
+.login-page {
+  margin-top: 1%;
+  background-color: #fcfcfc; /* Very light grey background */
+}
+
+.login-card {
+  margin-bottom: 17%;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+/* Custom button color matching your branding */
+.btn-cyan {
+  background-color: #00c4e8;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-cyan:hover {
+  background-color: #00accb;
+}
+
+/* Input styling */
+.form-control {
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+
+.custom-btn-cyan {
+  /* The exact cyan from your image */
+  background-color: #00c4e8 !important;
+  border: none !important;
+  color: white !important;
+  
+  /* Styling for height and rounding */
+  padding: 10px 20px;
+  border-radius: 8px; /* Smooth rounded corners */
+  font-size: 18px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover effect to make it feel interactive */
+.custom-btn-cyan:hover {
+  background-color: #00accb !important;
+  cursor: pointer;
+}
+
+/* Active/Click effect */
+.custom-btn-cyan:active {
+  background-color: #0093ad !important;
+  transform: scale(0.98); /* Slight shrink when clicked */
+}
+.d-grid{
+  width: 70% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+.create-account-link {
+  color: #333; /* Darker text color */
+  text-decoration: underline; /* The underline from the image */
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.create-account-link:hover {
+  color: #00c4e8; /* Changes to your branding color on hover */
+  text-decoration: underline;
+}
+
+/* Optional: styling the "New to Traveler?" text */
+.text-secondary {
+  color: #6c757d !important;
+  font-size: 15px;
+}
+/* Main Navbar Container */
+.sn-navbar-container {
+  background-color: #00c4e8 !important; /* Your signature cyan */
+  padding: 8px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* LEFT SIDE: Circular "S" Logo */
+.sn-logo-circle {
+  background-color: white;
+  color: #00c4e8;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sn-brand-text {
+  color: white !important;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 1.1rem;
+}
+
+/* CENTER: Links */
+.sn-nav-item {
+  color: white !important;
+  transition: opacity 0.2s;
+  font-weight: 500;
+}
+
+.sn-nav-item:hover {
+  opacity: 0.8;
+}
+
+/* SEARCH SECTION: Reverted from black to white */
+.sn-search-input {
+  background-color: white !important; 
+  border: 1px solid #ddd !important;
+  color: #333 !important; /* Dark text for typing */
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.sn-search-input::placeholder {
+  color: #888;
+}
+
+.sn-search-btn {
+  background-color: transparent;
+  border: 1px solid white !important;
+  color: white !important;
+  font-size: 14px;
+  margin-left: 5px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.sn-search-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* RIGHT SIDE: Admin/User Info & Logout */
+.sn-user-info {
+  color: white;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/* Update only these parts in your Navbar.css */
+
+.sn-login-btn {
+  background-color: white;
+  color: #00c4e8 !important;
+  padding: 4px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  /* Added border below */
+  border: 2px solid #ffffff; 
+  transition: all 0.3s ease;
+}
+
+.sn-login-btn:hover {
+  background-color: transparent;
+  color: white !important;
+  border: 2px solid white;
+}
+
+/* Ensure the center section stays perfectly aligned */
+.mx-auto {
+  display: flex;
+  align-items: center;
+}
+
+/* Add a bit of spacing to make the search box look better in the middle */
+.sn-search-input {
+  width: 250px; /* Adjusted width for the center layout */
+}
+/* ADMIN DROPDOWN STYLING */
+.dropdown-menu.sn-admin-dropdown {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-top: 10px;
+}
+
+.sn-admin-dropdown .dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #00c4e8;
+}
+
+
+/* 1. Force the Logout button to look like the Login button initially */
+.sn-navbar-container .sn-logout-btn,
+.sn-navbar-container button[onClick*="handleLogout"] {
+    background-color: white !important;
+    color: #00c4e8 !important;
+    border: 2px solid white !important;
+    padding: 4px 18px !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* 2. Flip the colors on Mouse Over (Hover) */
+.sn-navbar-container .sn-logout-btn:hover,
+.sn-navbar-container button[onClick*="handleLogout"]:hover {
+    background-color: transparent !important; /* Makes it look Cyan because of the Navbar background */
+    color: white !important;
+    border: 2px solid white !important;
+    cursor: pointer !important;
+}
+
+
+/* Add to Navbar.css */
+.sn-profile-trigger {
+    transition: 0.3s;
+}
+
+.sn-profile-trigger:hover {
+    background-color: #f0f0f0 !important;
+    border-color: #00c4e8 !important;
+}
+
+/* Ensure icons display properly (requires Bootstrap Icons) */
+.sn-avatar-icon i {
+    font-style: normal;
+}
