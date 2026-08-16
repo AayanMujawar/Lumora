@@ -1,7 +1,11 @@
 from flask import Flask, request, jsonify
 
+import sys
 import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from flask_cors import CORS
+
 from routes.users import usersRouter
 from routes.students import studentsRouter
 from routes.courses import coursesRouter
