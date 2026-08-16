@@ -11,9 +11,14 @@ from utils.utils import createResult, enableJWT
 app = Flask(__name__)
 enableJWT(app)
 
+@app.route("/")
+def home():
+    return jsonify(status="success", message="Hello! Lumora Backend API is running successfully.")
+
 @app.errorhandler(500)
 def server_error(e):
     return createResult(repr(getattr(e, "original_exception", e)), None), 200
+
 
 app.register_blueprint(usersRouter)
 app.register_blueprint(studentsRouter)
