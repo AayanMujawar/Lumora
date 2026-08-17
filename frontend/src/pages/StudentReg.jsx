@@ -1,25 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { studentregister } from '../services/userservice';
 import { toast } from 'react-toastify';
 import Navbar from "../components/Navbar";
 
 function StudentReg() {
-    const [sname, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [mobile_no, setMobile_no] = useState('');
-    const [course_name, setCourse_name] = useState(''); 
-    const [course_id, setCourse_id] = useState('');     
-
     const navigate = useNavigate();
     const location = useLocation();
 
-    useEffect(() => {
-        if (location.state) {
-            setCourse_name(location.state.selectedCourseName);
-            setCourse_id(location.state.selectedCourseId);
-        }
-    }, [location.state]);
+    const [sname, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [mobile_no, setMobile_no] = useState('');
+    const [course_name] = useState(location.state?.selectedCourseName || ''); 
+    const [course_id] = useState(location.state?.selectedCourseId || '');
 
     const register = async () => {
         // --- ISSUE 1: FRONTEND VALIDATION TOASTERS ---

@@ -20,20 +20,23 @@ const ManageCourses = () => {
 
     const [courseData, setCourseData] = useState(initialFormState);
 
-    useEffect(() => {
-        loadCourses();
-    }, []);
-
     const loadCourses = async () => {
         try {
             const result = await getAllCourses();
             if (result.status === 'success') {
                 setCourses(result.data);
             }
-        } catch (error) {
+        } catch {
             toast.error("Failed to load courses");
         }
     };
+
+    useEffect(() => {
+        const init = async () => {
+            await loadCourses();
+        };
+        init();
+    }, []);
 
     const handleInput = (e) => {
         setCourseData({ ...courseData, [e.target.name]: e.target.value });
@@ -51,7 +54,7 @@ const ManageCourses = () => {
                 resetForm();
                 loadCourses();
             }
-        } catch (error) {
+        } catch {
             toast.error("Operation failed");
         }
     };

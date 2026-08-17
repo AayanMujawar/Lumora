@@ -13,10 +13,6 @@ const StudentsList = () => {
     const [sortBy, setSortBy] = useState("Registration date");
     const [sortOrder, setSortOrder] = useState("Asc");
 
-    useEffect(() => {
-        loadInitialData();
-    }, []);
-
     const loadInitialData = async () => {
         try {
             const studentRes = await getAllEnrolledStudents();
@@ -25,10 +21,17 @@ const StudentsList = () => {
             // Backend returns data in result format
             if (studentRes.status === "success") setAllData(studentRes.data);
             if (courseRes.status === "success") setCourses(courseRes.data);
-        } catch (error) {
+        } catch {
             toast.error("Failed to fetch students list");
         }
     };
+
+    useEffect(() => {
+        const init = async () => {
+            await loadInitialData();
+        };
+        init();
+    }, []);
 
     // ============================
     // FILTER & SEARCH LOGIC

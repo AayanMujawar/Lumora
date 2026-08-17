@@ -19,7 +19,7 @@ const Courses = () => {
                 if (result && result.status === 'success') {
                     setEnrolledCourses(result.data); 
                 }
-            } catch (error) {
+            } catch {
                 toast.error("Session Unauthorized. Please login again.");
             }
         };
@@ -40,14 +40,14 @@ const Courses = () => {
                 if (result.status === 'success') {
                     setVisibleVideos({ ...visibleVideos, [courseId]: result.data });
                 }
-            } catch (error) {
+            } catch {
                 toast.error("Error loading videos");
             }
         }
     };
 
     // NEW: Logic to validate if course has started
-    const handlePlayVideo = (e, startDate, youtubeUrl) => {
+    const handlePlayVideo = (e, startDate) => {
         const today = new Date();
         const start = new Date(startDate);
 
@@ -57,7 +57,7 @@ const Courses = () => {
             toast.warn("Course is yet to start! Access will be granted on " + startDate);
             return false;
         }
-        // Otherwise, the <a> tag will naturally open the youtubeUrl
+        // Otherwise, the <a> tag will naturally open the link
     };
 
     return (

@@ -33,11 +33,6 @@ const ManageVideos = () => {
     // ============================
     // LOAD DATA
     // ============================
-    useEffect(() => {
-        loadVideos();
-        loadCourses();
-    }, []);
-
     const loadVideos = async () => {
         try {
             const res = await getAllVideos(); // Ensure backend SQL joins with 'courses' table
@@ -55,6 +50,14 @@ const ManageVideos = () => {
             toast.error("Failed to load courses");
         }
     };
+
+    useEffect(() => {
+        const init = async () => {
+            await loadVideos();
+            await loadCourses();
+        };
+        init();
+    }, []);
 
     // ============================
     // FILTER LOGIC (Client-Side)

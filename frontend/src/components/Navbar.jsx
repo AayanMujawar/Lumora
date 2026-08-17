@@ -35,7 +35,7 @@ const Navbar = () => {
             );
             setProfilePicUrl(`data:image/jpeg;base64,${base64}`);
           }
-        } catch (error) {
+        } catch {
           console.log("No profile picture found.");
         }
       }

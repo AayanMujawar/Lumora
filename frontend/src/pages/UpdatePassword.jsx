@@ -40,7 +40,7 @@ const UpdatePassword = () => {
             } else {
                 toast.error(result.message);
             }
-        } catch (error) {
+        } catch {
             toast.error("Failed to update password. Check your credentials.");
         }
     };
